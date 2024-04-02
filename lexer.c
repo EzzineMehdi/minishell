@@ -30,9 +30,6 @@ size_t	quote_counter(char *s, char ch)
 
 int	quote_checker(char *s)
 {
-	size_t	i;
-
-	i = 0;
 	if (quote_counter(s, '"') % 2)
 	{
 		write(2, "mini : syntax error unclosed quote(s)\n", 39);

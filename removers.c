@@ -61,9 +61,6 @@ int	ambiguous_check(t_lexer *h)
 
 void	ambiguous(t_lexer	**to_parse)
 {
-	t_lexer	*tmp;
-
-	tmp = *to_parse;
 	if (ambiguous_check(*to_parse))
 	{
 		*get_exit_stat() = 1;
