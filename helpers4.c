@@ -108,8 +108,10 @@ char	*ft_strtrim(char *s)
 		if (s[i] == '\'' || s[i] == '"')
 		{
 			q = i + 1;
-			while (s[q] != s[i])
+			while (s[q] && s[q] != s[i])
 				new[j++] = s[q++];
+			if (!s[q])
+				break ;
 			i = q + 1;
 		}
 		else
